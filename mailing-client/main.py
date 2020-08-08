@@ -22,3 +22,6 @@ with open('message.txt', 'r') as f:
     message = f.read()
 
 msg.attach(MIMEText(message, 'plain'))
+
+text = msg.as_string()
+server.sendmail('test@gmail.com', 'ToPerson@gmail.com', text)
