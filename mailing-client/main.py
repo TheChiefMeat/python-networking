@@ -4,4 +4,7 @@ server = smtplib.SMTP('smtp.gmail.com', 25)
 
 server.ehlo()
 
-server.login()
+with open('password.txt', 'r') as f:
+    password f.read()
+
+server.login('test@gmail.com' password)
