@@ -9,7 +9,7 @@ server = smtplib.SMTP('smtp.gmail.com', 25)
 server.ehlo()
 
 with open('password.txt', 'r') as f:
-    password f.read()
+    password = f.read()
 
 server.login('test@gmail.com' password)
 
