@@ -17,3 +17,8 @@ msg = MIMEMultipart()
 msg['From'] = 'MyName'
 msg['To'] = 'ToPerson@gmail.com'
 msg['Subject'] = 'Just A Test'
+
+with open('message.txt', 'r') as f:
+    message = f.read()
+
+msg.attach(MIMEText(message, 'plain'))
