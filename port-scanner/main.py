@@ -1,0 +1,9 @@
+import socket
+
+target = "192.168.1.1"
+
+
+def portscan(port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((target, port))
